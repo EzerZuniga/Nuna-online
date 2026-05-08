@@ -17,6 +17,7 @@ export class MobileMenuManager {
         const isHidden = this.#menuEl.classList.contains('hidden');
         this.#menuEl.classList.toggle('hidden');
         this.#toggleButtonEl.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        document.body.style.overflow = isHidden ? 'hidden' : '';
     }
 
     close() {
@@ -26,5 +27,6 @@ export class MobileMenuManager {
 
         this.#menuEl.classList.add('hidden');
         this.#toggleButtonEl.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
     }
 }

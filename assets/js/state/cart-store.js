@@ -65,7 +65,7 @@
             const saved = localStorage.getItem(this.#storageKey);
             this.#items = saved ? JSON.parse(saved) : [];
         } catch (error) {
-            console.error('Error loading cart from localStorage:', error);
+            console.error('Error al cargar el carrito desde el almacenamiento local:', error);
             this.#items = [];
         }
     }
@@ -74,7 +74,7 @@
         try {
             localStorage.setItem(this.#storageKey, JSON.stringify(this.#items));
         } catch (error) {
-            console.error('Error saving cart to localStorage:', error);
+            console.error('Error al guardar el carrito en el almacenamiento local:', error);
         }
     }
 }

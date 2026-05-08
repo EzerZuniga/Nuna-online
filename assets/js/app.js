@@ -39,6 +39,11 @@ function initializeApp() {
 
 function bindGlobalUiEvents({ cartStore, notifications, mobileMenu }) {
     document.addEventListener('click', (event) => {
+        if (event.target.id === 'mobile-menu') {
+            mobileMenu.close();
+            return;
+        }
+
         const actionTarget = event.target.closest('[data-action]');
         if (!actionTarget) {
             return;
@@ -48,6 +53,11 @@ function bindGlobalUiEvents({ cartStore, notifications, mobileMenu }) {
 
         if (action === 'toggle-mobile-menu') {
             mobileMenu.toggle();
+            return;
+        }
+
+        if (action === 'close-mobile-menu') {
+            mobileMenu.close();
             return;
         }
 
@@ -187,7 +197,7 @@ function renderCartPage(cartStore, notifications) {
                                 <p class="text-sm mb-2" style="color: var(--oro-inca);">
                                     ${formatPrice(item.price, CONFIG.currency)}
                                 </p>
-                                <div class="flex items-center gap-2">
+                                <div class="cart-item__controls">
                                     <button
                                         class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 transition"
                                         aria-label="Disminuir cantidad"
@@ -198,7 +208,7 @@ function renderCartPage(cartStore, notifications) {
                                             <path d="M5 12h14"></path>
                                         </svg>
                                     </button>
-                                    <span class="w-12 text-center font-medium">${item.quantity}</span>
+                                    <span class="cart-item__qty">${item.quantity}</span>
                                     <button
                                         class="w-8 h-8 flex items-center justify-center border border-gray-300 rounded hover:bg-gray-100 transition"
                                         aria-label="Aumentar cantidad"
