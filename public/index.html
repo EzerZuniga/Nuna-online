@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nuna - Tradición andina contemporánea con productos sostenibles y tecnología responsable.">
+    <meta name="theme-color" content="#8B4513">
+    <title>Nuna | Inicio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body class="tocapu-pattern" data-page="home">
+    <div class="scroll-progress" id="scroll-progress" style="width: 0%;"></div>
+
+    <header class="site-header fixed w-full top-0" role="banner">
+        <div class="container">
+            <nav class="flex items-center justify-between h-24" role="navigation" aria-label="Navegación principal">
+                <a href="./index.html" class="logo-container flex items-center space-x-3" aria-label="Nuna inicio">
+                    <div class="w-14 h-14 bg-gradient-to-br from-amber-800 to-amber-950 flex items-center justify-center logo-symbol">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="white" opacity="0.95"></path>
+                            <path d="M2 17L12 22L22 17" stroke="white" stroke-width="2.5" opacity="0.75"></path>
+                            <path d="M2 12L12 17L22 12" stroke="white" stroke-width="2.5" opacity="0.85"></path>
+                        </svg>
+                    </div>
+                    <span class="font-display text-3xl font-bold tracking-wide" style="color: var(--tierra-media);">NUNA</span>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-2">
+                    <a href="../pages/catalogo.html" class="nav-link">Catálogo</a>
+                    <a href="../pages/nosotros.html" class="nav-link">Nuestra Historia</a>
+                    <a href="../pages/sostenibilidad.html" class="nav-link">Sostenibilidad</a>
+                    <a href="../pages/contacto.html" class="nav-link">Contacto</a>
+                    <a href="../pages/carrito.html" class="relative p-3 ml-4 hover:bg-gray-100 rounded-full transition" aria-label="Ir al carrito">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span id="cart-count-badge" class="hidden absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-br from-red-500 to-red-600 text-white text-xs font-bold rounded-full flex items-center justify-center">0</span>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-button" class="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition" data-action="toggle-mobile-menu" aria-label="Abrir menú" aria-expanded="false">
+                    <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M3 12h18M3 6h18M3 18h18"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-200">
+            <div class="container py-6 space-y-4">
+                <a href="../pages/catalogo.html" class="block py-2 font-medium text-lg hover:text-amber-700 transition">Catálogo</a>
+                <a href="../pages/nosotros.html" class="block py-2 font-medium text-lg hover:text-amber-700 transition">Nuestra Historia</a>
+                <a href="../pages/sostenibilidad.html" class="block py-2 font-medium text-lg hover:text-amber-700 transition">Sostenibilidad</a>
+                <a href="../pages/contacto.html" class="block py-2 font-medium text-lg hover:text-amber-700 transition">Contacto</a>
+                <a href="../pages/carrito.html" class="w-full btn btn-secondary mt-4 text-center">
+                    Ver Carrito (<span id="mobile-cart-count">0</span>)
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" role="banner">
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=2000&q=90" alt="Textiles andinos tradicionales" loading="eager">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container">
+                <span class="badge badge-primary mb-6">Tradición Viva desde 1532</span>
+                <h1 class="font-display font-bold mb-6">Bienvenido a Nuna</h1>
+                <p class="text-xl md:text-2xl mb-8 font-light max-w-3xl mx-auto">
+                    Donde la herencia textil andina encuentra la excelencia contemporánea y sostenible.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="../pages/catalogo.html" class="btn btn-primary">Explorar Colección</a>
+                    <a href="../pages/nosotros.html" class="btn btn-secondary">Nuestra Historia</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-spacing bg-white">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <article class="feature-card">
+                        <div class="feature-icon" style="background: rgb(212 175 55 / 12%);">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--oro-inca);">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                                <path d="M16 11h6m-3-3v6"></path>
+                            </svg>
+                        </div>
+                        <h2 class="font-display text-2xl font-semibold mb-3" style="color: var(--tierra-media);">Fibras Naturales Premium</h2>
+                        <p class="text-gray-600 leading-relaxed">Trabajamos con alpaca baby y algodón Pima orgánico certificado, respetando técnicas ancestrales.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" style="background: rgb(196 92 62 / 12%);">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--terracota);">
+                                <rect x="2" y="7" width="20" height="14" rx="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                        </div>
+                        <h2 class="font-display text-2xl font-semibold mb-3" style="color: var(--tierra-media);">Tecnología Responsable</h2>
+                        <p class="text-gray-600 leading-relaxed">Seleccionamos gadgets duraderos y reparables con foco en impacto social y ambiental.</p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon" style="background: rgb(69 181 170 / 12%);">
+                            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--turquesa-andina);">
+                                <path d="M12 2v6.5"></path>
+                                <path d="M12 22v-6.5"></path>
+                                <path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 1 0 0-7z"></path>
+                                <path d="M19 15.5l-5.5-3.2"></path>
+                                <path d="M5 8.5l5.5 3.2"></path>
+                            </svg>
+                        </div>
+                        <h2 class="font-display text-2xl font-semibold mb-3" style="color: var(--tierra-media);">Gastronomía Andina</h2>
+                        <p class="text-gray-600 leading-relaxed">Café, cacao y superalimentos de comercio justo que celebran la biodiversidad andina.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="section-spacing">
+            <div class="container">
+                <div class="text-center mb-16">
+                    <h2 class="font-display font-bold mb-4" style="color: var(--tierra-media);">Productos Destacados</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">Una selección curada para conocer la esencia Nuna.</p>
+                </div>
+                <div id="featured-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+                <div class="text-center mt-12">
+                    <a href="../pages/catalogo.html" class="btn btn-primary">Ver Catálogo Completo</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container section-spacing">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-amber-700 to-amber-900 flex items-center justify-center">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="white" opacity="0.95"></path>
+                            </svg>
+                        </div>
+                        <span class="font-display text-2xl font-bold text-white">NUNA</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-4">Conectando tradición andina con diseño contemporáneo y comercio ético.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-white mb-4 text-lg">Navegación</h3>
+                    <nav class="space-y-3">
+                        <a href="../pages/catalogo.html" class="footer-link block">Catálogo</a>
+                        <a href="../pages/nosotros.html" class="footer-link block">Nuestra Historia</a>
+                        <a href="../pages/sostenibilidad.html" class="footer-link block">Sostenibilidad</a>
+                        <a href="../pages/contacto.html" class="footer-link block">Contacto</a>
+                    </nav>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-white mb-4 text-lg">Atención</h3>
+                    <p class="text-sm">Lun - Vie: 9:00 - 18:00<br>Sáb: 10:00 - 14:00</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-white mb-4 text-lg">Contacto</h3>
+                    <p class="text-sm">hola@nuna.pe<br>+51 999 888 777<br>Cusco, Perú</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8">
+                <p class="text-sm opacity-60">&copy; 2026 Nuna. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification-toast" class="notification-toast" role="alert" aria-live="polite">
+        <div class="flex items-center gap-3">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" class="flex-shrink-0" aria-hidden="true">
+                <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+            <p id="notification-message" class="font-medium"></p>
+        </div>
+    </div>
+
+    <script type="module" src="../assets/js/app.js"></script>
+</body>
+</html>
+
